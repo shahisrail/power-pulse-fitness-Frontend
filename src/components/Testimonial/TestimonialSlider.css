@@ -1,0 +1,83 @@
+/* Ensure the Swiper container takes up the full width */
+.testimonial-slider {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+}
+
+.testimonial-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.testimonial-content {
+  padding: 10px 0;
+}
+
+.testimonial-review {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial-meta {
+  text-align: left;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial-role {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.testimonial-rating {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-rating span {
+  color: #f9c100;
+  font-size: 16px;
+}
+
+.testimonial-review-count {
+  font-size: 14px;
+  color: #666;
+  margin-left: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    max-width: 100%;
+  }
+}

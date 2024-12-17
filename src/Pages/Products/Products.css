@@ -1,0 +1,193 @@
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.checkbox-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-box {
+  width: 18px; /* Increase width here */
+  height: 18px; /* Increase height here */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s; /* Smooth transition for border color change */
+}
+
+.checkmark {
+  width: 16px; /* Adjust size of the checkmark to fit the larger box */
+  height: 16px;
+  stroke: #f89dc9; /* Initial color of the checkmark */
+  display: none; /* Initially hide checkmark */
+}
+
+.hidden-checkbox:checked + .checkbox-content .checkbox-box .checkmark {
+  display: block;
+}
+
+.checkbox-label:hover .checkbox-box .checkmark,
+.hidden-checkbox:checked + .checkbox-content .checkbox-box .checkmark {
+  display: block; /* Show checkmark on hover or when checked */
+}
+
+.checkbox-text {
+  font-size: 15px;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.checkbox-count {
+  font-size: 15px;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.checkbox-label:hover .checkbox-text,
+.checkbox-label:hover .checkbox-count {
+  color: #f89dc9; /* Change text color on hover */
+}
+
+.checkbox-label:hover .checkmark {
+  stroke: #f89dc9; /* Change checkmark color on hover */
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+/* Thumb styling */
+.custom-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 20px;
+  background-color: #f87f96;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  pointer-events: all; /* Allow interaction */
+  position: relative;
+  margin-top: -8px;
+}
+
+.custom-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #f87f96;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-range::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #f87f96;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Inactive track */
+.slider-container .custom-range {
+  pointer-events: all;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background-color: #f87f96;
+  border-radius: 5px;
+}
+
+.custom-range::-moz-range-track {
+  height: 8px;
+  background-color: #f87f96;
+  border-radius: 5px;
+}
+
+/* Active track between min and max */
+.custom-range-track-active {
+  position: absolute;
+  height: 2px;
+  background-color: #f87f96; /* Active portion between the thumbs */
+  border-radius: 5px;
+  top: 3px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Focus styling */
+.custom-range:focus::-webkit-slider-runnable-track {
+  background-color: #f87f96;
+}
+
+.filter-button {
+  background-color: #f87f96;
+  color: white;
+  padding: 5px 10px;
+  /* border-radius: 5px; */
+  /* margin: 0 5px 5px 0; */
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.clear-all-button {
+  background-color: #f87f96;
+  color: white;
+  padding: 5px 10px;
+  /* border-radius: 5px; */
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.active-filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

@@ -1,0 +1,28 @@
+.card {
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 0px !important;
+  cursor: pointer;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.loader span {
+  width: 7px;
+  height: 7px;
+  margin: 0 5px;
+  background-color: #d3d3d3; /* Default grey color */
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.card:hover .loader span {
+  background-color: red; /* Change to red when hovering over the card */
+}

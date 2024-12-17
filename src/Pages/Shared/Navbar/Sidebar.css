@@ -1,0 +1,104 @@
+/* Right Side Sidebar CSS */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 1000;
+  transition: right 0.7s ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  padding: 0 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.cart-items {
+  max-height: 100%;
+}
+
+.sidebar-footer {
+  flex-shrink: 0;
+  margin-top: 10px;
+  padding: 20px;
+  border-top: 1px solid #e8e8e1;
+}
+
+/* Backdrop CSS */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.backdrop.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive for smaller screen widths */
+@media (max-width: 425px) {
+  .sidebar {
+    width: 360px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sidebar {
+    width: 320px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sidebar {
+    width: 280px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.custom-swal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.custom-swal-popup {
+  font-family: "Poppins", sans-serif;
+}
+
+.custom-swal-confirm-btn {
+  font-family: "Poppins", sans-serif;
+  background-color: #3085d6;
+  color: white;
+}
+
+.custom-swal-cancel-btn {
+  font-family: "Poppins", sans-serif;
+  background-color: #d33;
+  color: white;
+}

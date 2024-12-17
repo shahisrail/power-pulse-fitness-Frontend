@@ -1,0 +1,52 @@
+.custom-checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 1px solid #7c7c94;
+  border-radius: 3px;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 40%;
+  background-color: #000;
+  display: none;
+}
+
+input:checked + .custom-checkbox::after {
+  display: block;
+}
+
+.contact-hover-effect {
+  position: relative;
+  border-bottom: 1px solid #cbc5c5;
+}
+
+.contact-hover-effect::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 0.5s ease-in-out;
+}
+
+.contact-hover-effect:hover::after {
+  width: 100%;
+}
